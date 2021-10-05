@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>
+  </title>
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <style>
+    html{font-family:'Spoqa Han Sans Neo', 'sans-serif';color: white;}
+    h3{padding-top: 100px;text-align: center; margin-bottom: 40px;font-size: 1.5em;color: white;}
+    .clock{font-family:'Spoqa Han Sans Neo', 'sans-serif';color: white; font-size: 2em;padding-top: 150px; font-weight: 600px;}
+     body{margin: 0; background-color: black; text-align: center;}
+  </style>
+
+</head>
+<body>
+  <div class="main2">
+    <h3>제가 잘 이해한 건지 모르겠네요.</h3>
+    <div><img src="siri2.png" width="600px"; height="150px";></div>
+    <div id="siriClock" class="clock"></div>
+
+    <script type="text/javascript">
+
+    function clock(){
+
+    var d = new Date();
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+      siriClock.innerHTML = '지금은 ' + hour + '시 ' + minute + "분 " + second + "초에요.";
+      console.log(siriClock.innerHTML);
+      }
+
+        function init(){
+          clock();
+          setInterval(clock, 1000);
+        }
+
+    init();
+  </script>
+</body>
+</html>
